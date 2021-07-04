@@ -1,4 +1,4 @@
-# vue-tailwind
+# Covid-19 Tracker
 
 ## installation
 ```
