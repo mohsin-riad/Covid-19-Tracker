@@ -1,37 +1,18 @@
 # Covid-19 Tracker
 
 ## installation
-```
-git clone https://github.com/mohsin-riad/Covid-19-Tracker.git
-cd Covid-19-Tracker
-npm install
-```
+> coming soon...
 ### Tailwind integration
 * setup: [Tailwind-css](https://tailwindcss.com/docs/installation)
-```
-# Generate tailwind.config.js >full
-vue add tailwind 
-```
+> coming soon...
 
 ### Compiles and hot-reloads for development
-```
-npm run serve
-```
+> coming soon...
 
 ## Build
-```
-# select: vue 3, vue router, bebel
-vue create Covid-19-Tracker
-
-# run localhost server
-npm run serve
-```
-
+> coming soon...
 ### Compiles and minifies for production
-```
-npm run build
-```
-
+> coming soon...
 ### Api 
 > coming soon...
 
