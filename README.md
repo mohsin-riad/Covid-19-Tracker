@@ -1,5 +1,8 @@
 # Covid-19 Tracker
 
+##Live 
+> [covid-19-info](https://covid19vue.netlify.app/)
+
 ## installation
 ``` bash
 git clone https://github.com/mohsin-riad/Covid-19-Tracker.git
