@@ -1,6 +1,6 @@
 # Covid-19 Tracker
 
-##Live 
+## Live 
 > [covid-19-info](https://covid19vue.netlify.app/)
 
 ## installation
