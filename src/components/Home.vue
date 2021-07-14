@@ -9,12 +9,12 @@
     </div>
     
     <div class="">
-      <div class="dark:bg-gray-500 dark:text-gray-300 dark:bg-opacity-20 bg-gray-300 shadow rounded-md mt-4 mb-4 p-4 md:max-w-screen-md max-w-sm w-full mx-auto">
-        <div class="dark:text-gray-300 text-2xl flex text-gray-700 mb-2">
+      <div class="dark:bg-gray-500 dark:text-gray-300 dark:bg-opacity-20 bg-gray-300 p-4 shadow rounded-md mt-4 mb-4  2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-sm w-full mx-auto">
+        <div class="dark:text-gray-300 text-center text-2xl mt-2 text-gray-700 mb-2">
           Country Data
         </div>
-        <select @change="onChange" v-model="selectedCountry" class="dark:text-gray-200 dark:bg-opacity-40 dark:bg-gray-900 form-select bg-gray-200 mt-1 block w-full rounded shadow p-1">
-          <option value="0">Select A Country</option>
+        <select @change="onChange" v-model="selectedCountry" class="dark:text-gray-200 dark:bg-opacity-40 dark:bg-gray-900 form-select bg-gray-200 mt-2 block 2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm w-full mx-auto rounded shadow p-1">
+          <option class="text-white bg-gray-800" value="0">Select A Country</option>
           <option v-for="c in countries" :key="c.ID" :value="c.ID">{{ c.Country }}</option>
         </select>
       </div>
@@ -79,21 +79,20 @@
     </div>
 
     <div v-else>
-      <div class=" shadow rounded-md bg-red-200 p-10 max-w-sm 2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full mx-auto">
+      <div class="animate-pulse shadow rounded-md dark:bg-red-900 opacity-60 bg-red-200 p-10 max-w-sm 2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full mx-auto">
         <div class="animate-pulse flex space-x-4">
           <div class="flex-1 space-y-4 py-1">
-            <div class="h-4 bg-red-400 rounded w-3/4"></div>
+            <div class="h-4 bg-red-400 dark:bg-red-400 rounded w-3/4"></div>
             <div class="space-y-2">
-              <div class="h-4 bg-red-400 rounded"></div>
-              <div class="h-4 bg-red-400 rounded w-5/6"></div>
+              <div class="h-4 bg-red-400 dark:bg-red-400 rounded"></div>
+              <div class="h-4 bg-red-400 dark:bg-red-400 rounded w-5/6"></div>
             </div>
           </div>
         </div>
       </div>
-      <img :src="img" alt="" class="w-24 m-auto" />
     </div>
 
-    <footer class="bg-gray-800 grid mt-4 shadow-md rounded p-2 w-full 2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-md mx-auto">
+    <footer class="dark:bg-gray-900 grid mt-4 shadow-md rounded p-2 w-full 2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-md mx-auto">
       <div class="text-gray-500 text-center font-thin font-sans text-sm"> <small> Developed By </small><a href="https://github.com/mohsin-riad" class=" font-semibold text-gray-400 "> Mohsin Riad </a> </div>
     </footer>
 
@@ -148,7 +147,6 @@ export default {
         Premium: '',
       } ,
       flagURL : '',
-      img: require('../assets/loading.gif'),
     }
   },
   methods: {
@@ -158,8 +156,7 @@ export default {
     async onChange() {
       this.Country = this.countries.find((item) => item.ID === this.selectedCountry);
       this.stats = this.Country;
-      this.flagURL = 'https://www.countryflags.io/'+this.stats.CountryCode+'/shiny/64.png';
-
+      this.flagURL = 'https://www.countryflags.io/'+this.stats.CountryCode+'/flat/64.png';
       // console.log(this.Country); 
     }
   },
